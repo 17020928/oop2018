@@ -23,6 +23,7 @@ public class Student {
 		this.group = group;
 	}
 	public String getgroup(){
+		if(group==null) return "";
 		return group;	
 	}
 	//email
@@ -34,7 +35,7 @@ public class Student {
 		// TODO:
 		name = "Student";
 		id = "000";
-		group = "INT22401";
+		group = "INT22405";
 		email = "uet@vnu.edu.vn";
 	}
     Student(String n, String sid, String em) {
