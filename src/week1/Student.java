@@ -13,10 +13,12 @@ public class Student {
 	}
 	//Id
 	public void setid(String id){
+
 		this.id = id;
 	}
-	public String getId(){
-		return id;	
+	public String getid(){
+		if(id==null) return "";
+		return id;
 	}
 	//Group
 	public void setgroup(String group){
@@ -35,7 +37,7 @@ public class Student {
 		// TODO:
 		name = "Student";
 		id = "000";
-		group = "INT22405";
+		group = "INT22401";
 		email = "uet@vnu.edu.vn";
 	}
     Student(String n, String sid, String em) {

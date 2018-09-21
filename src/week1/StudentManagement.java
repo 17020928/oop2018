@@ -27,33 +27,44 @@ public class StudentManagement {
 			kiemtra=true;
 		}
 		int tong=i;
-		// Mảng s[m-1] chứa tên các group: 2
+		// Mảng s[m-1] chứa tên các group:
 		for(int z=0;z<m;z++) {
 			System.out.println("Nhom "+s[z]+":");
 			for(int j=0;j<tong;j++){
-				if(students[j].getgroup().equals(s[z]) && !students[j].getId().equals("--") /*&& !students[j].getgroup().equals("")*/) System.out.println(students[j].getInfo());
+				if(students[j].getgroup().equals(s[z]) ) System.out.println(students[j].getInfo());
 			}
-			//System.out.println(s[z]+" ");
 		}
 	}
 	void removeStudent(String id) {
     	int i=0;
+    	if(id==null) id="";
 		while(students[i]!=null){
-			if(students[i].getId().equals(id)) students[i].setid("--");
 			i++;
+		}
+		int max=i;
+		int j=0;
+		while(j<max){
+			if(students[j].getid().equals(id)){
+				for(int z=j;z<max;z++){
+					students[z]=students[z+1];
+				}
+				max--;
+			}
+			else j++;
 		}
 	}
     public static void main(String[] args) {
 		StudentManagement st = new StudentManagement();
 		st.students[0]= new Student();
-		st.students[1]= new Student("Nghia","17020928","nghiaprto@");
-		st.students[2]=new Student("Kha","17020942","tungasd@");
+		st.students[1]= new Student("Nghia",null,"nghiaprto@");
+		st.students[2]= new Student("Kha","17020942","tungasd@");
+		st.students[3]= new Student(st.students[2]);
+		st.students[3].setname("Nhanh");
 		st.students[2].setgroup(null);
 		System.out.println("Xuat lan dau tien:");
 		st.studentsByGroup();
-	/*	System.out.println("Xuat lan thu hai: ");
-		st.removeStudent("000");
+		System.out.println("\n"+"Xuat lan thu hai: ");
+		st.removeStudent("17020942");
 		st.studentsByGroup();
-*/
     }
 }
