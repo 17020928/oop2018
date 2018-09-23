@@ -1,20 +1,11 @@
 package week2.task2;
+
 import week2.task1.Task1;
 
 public class Fraction {
 
     // TODO: khai báo các thuộc tính
     private int numerator, denominator;
-//    public void xuly(int numerator,int denominator){
-//        if(numerator<0 && denominator<0) {
-//            numerator=-numerator;
-//            denominator=-denominator;
-//        } else
-//        if(numerator>0 && denominator<0) {
-//            denominator=-denominator;
-//            numerator=-numerator;
-//        }
-//    }
     // Hàm kiểm tra mẫu =0?
     public boolean kiemtramau(int a){
         if(a==0) return true;
@@ -43,8 +34,8 @@ public class Fraction {
             System.out.println("Loi! Phan so co mau = 0");
         }
         else{
-            this.numerator = numerator / Task1.gcd(numerator,denominator);
-            this.denominator = denominator / Task1.gcd(numerator,denominator);
+            this.numerator = numerator /*/ Task1.gcd(numerator,denominator)*/;
+            this.denominator = denominator /*/ Task1.gcd(numerator,denominator)*/;
         }
     }
     //Ham xuat ra man hinh
@@ -158,12 +149,13 @@ public class Fraction {
     public static void main(String[] argv) {
         Fraction s = new Fraction(12,-5);
         Fraction s1= new Fraction(12,8);
+        s1.setNumerator(34);
         System.out.println("Phan so 1 la: " + s.getNumerator() + "/" + s.getDenominator());
         System.out.println("Phan so 2 la: " + s1.getNumerator() + "/" + s1.getDenominator());
         System.out.println("Cong 2 phan so tren :");
         s.screen(s.add(s1));
         System.out.println("Tru 2 phan so tren :");
-        s.screen(s1.subtract(s1));
+        s.screen(s.subtract(s1));
         System.out.println("Nhan 2 phan so tren :");
         s.screen((s.multiply(s1)));
         System.out.println("Chia 2 phan so tren :");
