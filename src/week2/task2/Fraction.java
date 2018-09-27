@@ -148,7 +148,7 @@ public class Fraction {
 
     public boolean equals(Object obj){
         Fraction fraction = (Fraction) obj;
-        if(this.subtract(fraction)==0)
+        if(this.subtract(fraction).getNumerator()==0)
             return true;
         return false;
     }
