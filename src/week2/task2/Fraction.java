@@ -34,8 +34,8 @@ public class Fraction {
             System.out.println("Loi! Phan so co mau = 0");
         }
         else{
-            this.numerator = numerator /*/ Task1.gcd(numerator,denominator)*/;
-            this.denominator = denominator /*/ Task1.gcd(numerator,denominator)*/;
+            this.numerator = numerator ;
+            this.denominator = denominator ;
         }
     }
     //Ham xuat ra man hinh
@@ -146,8 +146,14 @@ public class Fraction {
         }
     }
 
+    public boolean equals(Object obj){
+        obj = (Fraction)obj;
+        if(numerator/denominator != ((Fraction) obj).getNumerator()/((Fraction) obj).getDenominator())
+            return true;
+        return false;
+    }
     public static void main(String[] argv) {
-        Fraction s = new Fraction(12,-5);
+        Fraction s = new Fraction(12,-8);
         Fraction s1= new Fraction(12,8);
         s1.setNumerator(34);
         System.out.println("Phan so 1 la: " + s.getNumerator() + "/" + s.getDenominator());
@@ -160,5 +166,6 @@ public class Fraction {
         s.screen((s.multiply(s1)));
         System.out.println("Chia 2 phan so tren :");
         s.screen(s.divide(s1));
+        System.out.println("Phan so 1 khac phan so 2: "+s.equals(s1));
     }
 }
