@@ -17,7 +17,15 @@ public class Week3Test {
     // TODO: Viết 5 testcase cho phương thức minOfArray()
     public void testMin(){
         int[] array = {1,2,3};
+        int[] array2 = {1,-10,3,-10};
+        int[] array3 = {14,234,-234};
+        int[] array4 = {54,43,65};
+        int[] array5 = {1,2,6,-5,3};
         assertEquals(1,Week3.minOfArray(array));
+        assertEquals(-10,Week3.minOfArray(array2));
+        assertEquals(-234,Week3.minOfArray(array3));
+        assertEquals(43,Week3.minOfArray(array4));
+        assertEquals(-5,Week3.minOfArray(array5));
     }
     @Test
     // TODO: Viết 5 testcase cho phương thức calculateBMI()
