@@ -3,6 +3,10 @@ package week4.task1;
 public class Tao extends HoaQua {
     private String name;
     private float cost;
+    Tao(String type,String taste){
+        this.setType(type);
+        this.setTaste(taste);
+    }
     public void setName(String name){
         this.name=name;
     }
@@ -16,12 +20,7 @@ public class Tao extends HoaQua {
         return cost;
     }
 
-    @Override
-    public void setTaste(String taste) {
-        super.setTaste(taste);
-    }
-
-    public String getInfo(){
-        return this.getName()+" "+super.getTaste()+" co gia tien la: "+cost;
+    public String toString(){
+        return this.getName()+" "+this.getTaste()+" co gia tien la: "+cost+" 1kg";
     }
 }

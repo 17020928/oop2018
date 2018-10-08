@@ -2,10 +2,10 @@ package week4.task1;
 
 public class CamThanhPhong extends Cam {
     private float cost;
-    CamThanhPhong(){};
-    CamThanhPhong(String x,float y ) {
-        this.setName(x);
-        this.cost=y;
+    CamThanhPhong(){this.setType("Cam");};
+    CamThanhPhong(String name,float cost ) {
+        new Cam(name,"Tươi");
+        this.cost=cost;
     }
     public void setCost(float cost) {
         this.cost = cost;
@@ -13,7 +13,7 @@ public class CamThanhPhong extends Cam {
     public float getCost(){
         return cost;
     }
-    public String getInfo(){
-        return this.getName()+" "+super.getTaste()+" co gia tien la: "+cost;
+    public String toString(){
+        return this.getName()+" "+super.getTaste()+" co gia tien la: "+cost+" 1kg";
     }
 }
