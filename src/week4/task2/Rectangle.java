@@ -33,6 +33,6 @@ public class Rectangle extends Shape{
         return 2*(width+length);
     }
     public String toString(){
-        return length+" "+width+" "+getColor()+" "+getArea()+" "+getPerimeter();
+        return "chiều dài: "+length+" chiều rộng: "+width+" có màu: "+getColor()+" có diện tích: "+getArea()+" có chu vi: "+getPerimeter();
     }
 }

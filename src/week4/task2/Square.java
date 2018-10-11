@@ -22,6 +22,6 @@ public class Square extends Rectangle{
         super.setLength(side);
     }
     public String toString(){
-        return getSide()+" "+getColor()+" "+getFilled();
+        return "độ dài cạnh: "+getSide()+" ,có màu: "+getColor()+" ,có diện tích: "+getArea()+" ,có chu vi: "+getPerimeter();
     }
 }

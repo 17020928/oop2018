@@ -24,6 +24,6 @@ public class Cirle extends Shape {
         return PI*2*radius;
     }
     public String toString(){
-        return radius+" "+getArea()+" "+getPerimeter();
+        return "Bán kính: "+radius+" diện tích: "+getArea()+" chu vi: "+getPerimeter();
     }
 }

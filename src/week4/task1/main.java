@@ -1,5 +1,4 @@
 package week4.task1;
-import week4.task1.*;
 public class main {
     public static void main(String[] argv){
         CamSanh camsanh = new CamSanh("Cam Sành Hải Phòng",17000);
@@ -15,6 +14,6 @@ public class main {
         tao.setName("Táo Vô Danh Trung Quốc");
         tao.setCost(1000);
         System.out.println(tao);
-        System.out.println(camsanh.sameType(camsanh.getType(),tao.getType()));
+        System.out.println(tao.getName()+" va "+camsanh.getName()+" "+camsanh.sameType(camsanh.getType(),tao.getType()));
     }
 }
