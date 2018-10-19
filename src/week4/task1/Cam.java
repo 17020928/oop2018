@@ -1,7 +1,11 @@
+/**
+ * khai báo lớp cam kế thừa hoa quả có thuộc tính name
+ */
 package week4.task1;
 
 public class Cam extends HoaQua {
     private String name;
+    // Constructor
     Cam(){
     }
     Cam(String x){

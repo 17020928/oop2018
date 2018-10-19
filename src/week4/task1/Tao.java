@@ -1,3 +1,6 @@
+/**
+ * KHai báo lớp Táo là lớp con của Hoa Quả
+ */
 package week4.task1;
 
 public class Tao extends HoaQua {

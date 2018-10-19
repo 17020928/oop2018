@@ -1,8 +1,11 @@
+/**
+ * TODO: khai báo lớp Hoa quả là lớp cha có thuộc tính type( loại quả);
+ */
 package week4.task1;
 
 public class HoaQua {
     private String type;
-
+    //Constructor
     HoaQua() {
     }
 
@@ -30,6 +33,7 @@ public class HoaQua {
     public String getType(){
         return type;
     }
+    //TODO:kiểm tra cả 2 cùng 1 loại quả
     public String sameType(String type1,String type2){
         if(type1.equals(type2)) return"và 2 thứ cùng một họ "+ type;
         else return"2 thứ khác họ";

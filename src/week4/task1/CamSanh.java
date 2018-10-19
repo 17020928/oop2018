@@ -1,7 +1,14 @@
+/**
+ *  khai báo class Cam sành kế thừa lớp cam
+ */
 package week4.task1;
 
 public class CamSanh extends Cam {
     private float cost;
+
+    /**
+     * constructor
+     */
     CamSanh(){};
     CamSanh(String name,float cost ) {
         this.setName(name);

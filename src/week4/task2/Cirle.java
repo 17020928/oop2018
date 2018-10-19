@@ -1,7 +1,11 @@
+/**
+ * Khai báo lớp circle kế thừa shape
+ */
 package week4.task2;
 
 public class Cirle extends Shape {
     private double radius = 1.0;
+    // constructor
     public Cirle(){};
     public Cirle(double radius){
         this.radius=radius;
