@@ -1,9 +1,9 @@
 package week7.task1;
 
-public class Addition extends BinaryExpression{
+public class Sub extends BinaryExpression {
     private Expression left;
     private Expression right;
-    public Addition(Expression a,Expression b){
+    public Sub(Expression a,Expression b){
         left=a;
         right=b;
     }
@@ -11,7 +11,7 @@ public class Addition extends BinaryExpression{
         return "";
     }
     public int evaluate(){
-        return left.evaluate()+right.evaluate();
+        return left.evaluate()-right.evaluate();
     }
     public Expression left(){
         return left;
