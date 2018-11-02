@@ -26,15 +26,11 @@ public class Task2 {
     }
 
     public void ioException() throws IOException  {
-        FileReader fr = new FileReader("C:\\Users\\Asus\\Desktop\\Ahigh\\bai1.txt");
-        BufferedReader br = new BufferedReader(fr);
-        int i;
-        while ((i = br.read()) != -1) {
-            System.out.print((char) i);
-        }
+        FileWriter fr = new FileWriter("C:\\Users\\Asus\\Desktop\\Ahigh\\bai1.txt");
+        BufferedWriter br = new BufferedWriter(fr);
         br.close();
         fr.close();
-        throw new IOException("IOException");
+        br.write("sss");
     }
     public void Filenot() throws FileNotFoundException{
         FileInputStream f = new FileInputStream("txt.txt");
